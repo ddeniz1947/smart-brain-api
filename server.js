@@ -30,7 +30,7 @@ app.post('/signin',signin.handleSignin(db,bcrypt)); //Böyle kullanırsak ilk ö
 app.get('/profile/:id', (req, res)=> {profile.handleProfileGet(req,res,db)});
 app.put('/image', (req, res)=> {image.handleImage(req,res,db)});
 app.post('/imageurl', (req, res)=> {image.handleApiCall(req,res)});
-app.listen(3001, () => {
+app.listen(3000, () => {
     console.log('WORKING');
 })
 
