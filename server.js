@@ -23,7 +23,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 app.get('/', (req, res) => {
-    res.send('Working');
+    res.send(database.users);
 })
 app.post('/register',(req,res) => {register.handleRegister(req,res,db,bcrypt)});
 app.post('/signin',signin.handleSignin(db,bcrypt)); //Böyle kullanırsak ilk önce db ve bcrypt çalışır sonra req,res çalışır (Ya dosya içinde req,res verecez ya da burda (db,bcrypt)(req,res) şeklinde burda vercez)
